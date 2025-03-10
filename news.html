@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./news.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo__img" src="./cars/h (21).png" alt="" />
+        <nav class="nav_header">
+            <ul>
+                <li><a class="info__button-headers1" href="#">Про нас</a></li>
+                <li><a class="info__button-headers2" href="#">Про сайт</a></li>
+                <li><a class="info__button-headers3" href="./index.html">Головна</a></li>
+            </ul>
+        </nav>
+        <button id="submitBtn">Зареєструватись</button>
+        <h3 id="display"></h3>
+    </header>
+
+
+
+
+    <div class="pred_block">
+        <div class="pred_text">
+            <h1>Вітаємо на нашому сайті</h1>
+            <p>Тут ви зможете знайти <br> новини які вас цікавлять</p>
+            <p>Нижче ви можете <br> перейти до пошуку новин</p>
+        </div>
+        <img class="pred_img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaGkc1DidqD6O85uOgDQMHCF5CSjLhF2Kxg&s" alt="">
+    </div>
+    <!-- <a class="pred_a" href="#search">
+        <button class="pred_button">
+            <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                <line x1="25" y1="5" x2="25" y2="35" stroke="black" stroke-width="2" />
+                <polygon points="20,35 25,45 30,35" fill="black" />
+            </svg>
+        </button>
+    </a> -->
+
+
+
+
+
+
+
+    <div class="all">
+        <h1 class="news_one">Пошук Новин</h1>
+        <div class="block">
+            <input id="search" class="block__input" type="text" placeholder="Введіть ключове слово">
+            <button class="button__block">Пошук!</button>
+        </div>
+    </div>
+
+    <ul class="block__news">
+
+    </ul>
+    <div class="countainer__pagination">
+        <button class="btn_1">Назад!</button>
+        <span class="spanchik hidden">Сторінка 1</span>
+        <button class="btn_2">Вперед!</button>
+    </div>
+
+
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close1">&times;</span>
+            <h2>Про нас</h2>
+            <p class="modal__text-info">Сашко 18 років, зараз проживає в Чехії</p>
+            <p class="modal__text-info">Ярослав 14 років, проживає в Вінниці</p>
+        </div>
+    </div>
+
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close2">&times;</span>
+            <h2>Про сайт</h2>
+            <p class="modal__text-info">Ми працювали над цим сайтом близько 3 тижнів</p>
+            <p class="modal__text-info">Працювали не покладаючи сил, але також не забували про відпочинок</p>
+            <p class="modal__text-info">Будемо раді якщо вам сподобається</p>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                <img src="../cars/h (21).png" alt="Логотип">
+                <p>© 2024 YourCompany. Усі права захищені.</p>
+            </div>
+
+
+            <div class="footer-links">
+                <h4>Швидкі посилання</h4>
+                <ul>
+                    <li><a href="./index.html">Головна</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Послуги</a></li>
+                    <li><a href="https://t.me/kent_tvoego_bati">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Ми у соцмережах</h4>
+                <a href="https://www.facebook.com/profile.php?id=100018199332973&locale=uk_UA">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="./news.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARSHUB</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <body>
+
+
+    <div class="block__img-count-disc">
+      <img class="img__disc" src="./cars/disc.com.png" alt="">
+    </div>
+
+
+    <header>
+      <img class="logo__img" src="./cars/h (21).png" alt="" />
+      <nav>
+        <ul>
+          <li><a class="info__button-headers" href="#">Про нас</a></li>
+          <li><a class="info__button-headers-contact" href="#">Про сайт</a></li>
+          <li><a class="news" target="_blank" href="./news.html">Новини</a></li>
+        </ul>
+      </nav>
+      <button id="submitBtn">Зареєструватись</button>
+      <h3 id="display"></h3>
+    </header>
+
+
+
+    <main>
+      <div class="container">
+        <div class="countainer__text-cars">
+          <h1>
+            Seamless Travel With Fast <span class="highlight">RapidRide</span> Car
+            Rental
+          </h1>
+        </div>
+
+        <div class="buttons">
+          <div class="btn">View All Cars 🚗</div>
+          <div class="btn btn-outline">Contact Us 🚘</div>
+        </div>
+        <img src="./cars/hero-group.png" class="car-image" />
+      </div>
+
+<!--  -->
+     <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Contact Us 🚘</h2>
+          <p class="modal__text-info" >Зв'яжіться з нами для отримання додаткової інформації про оренду авто.</p>
+          <p class="modal__text-info" >Email: info@rapidride.com</p>
+          <p class="modal__text-info" > Телефон: +380 97 123 45 67</p>
+        </div>
+     </div>
+<!--  -->
+     <!--  -->
+     <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close1">&times;</span>
+        <h2>Про нас</h2>
+        <p class="modal__text-info">Сашко 18 років, зараз проживає в Чехії</p>
+        <p class="modal__text-info">Ярослав 14 років, проживає в Вінниці</p>
+      </div>
+    </div>
+     <!--  -->
+      
+     <!--  --> 
+     <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close2">&times;</span>
+        <h2>Про сайт</h2>
+        <p class="modal__text-info">Ми працювали над цим сайтом близько 3 тижнів</p>
+        <p class="modal__text-info">Працювали не покладаючи сил, але також не забували про відпочинок</p>
+        <p class="modal__text-info">Будемо раді якщо вам сподобається</p>
+      </div>
+    </div>
+     <!--  -->
+     <div id="modal3" class="modal3">
+      <div class="modal-content">
+        <span class="close3">&times;</span>
+        <h2>Про сайт</h2>
+        <p class="modal__text-info">Ви хочете зберегти ці дані про локацію на якій ви бронюєте авто?</p>
+        <p class="modal__text-info">Якщо так то нажміть готово!</p>
+        <button class="modal__text-info-button">Готово!</button>
+      </div>
+    </div>
+    <!--  -->
+
+    <div id="chartContainer">
+      <canvas id="myChart"></canvas>
+  </div>
+
+
+      <div class="search-box">
+        <div>
+          Pick Up Location<br /><input
+            type="text"
+            placeholder="Pick-up location"
+          />
+        </div>
+        <div>
+          Drop Up Location<br /><input
+            type="text"
+            placeholder="Drop-up location"
+          />
+        </div>
+        <div>Pick Up Date<br /><input type="date" /></div>
+        <div>Drop Up Date<br /><input type="date" /></div>
+      </div>
+
+      <button class="search_box-button">Зберегти дані</button>
+
+      <div class="stats">
+        <div>
+          <h4>3+ Years</h4>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div>
+          <h4>100+ Cars</h4>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div>
+          <h4>1500+ Customers</h4>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+      </div>
+
+
+
+      <!-- ОСЮДИ -->
+
+      <section class="rental">
+        <div class="rental-container">
+          <div class="rental-text">
+            <h2>Your Gateway to Seamless Adventures</h2>
+            <p>
+              Embark on your journey with ease and flexibility through
+              RapidRide, your premier destination for rental cars. Whether
+              you're planning a cross-country road trip, a weekend getaway, or
+              simply need a reliable ride for your daily commute, RapidRide has
+              you covered.
+            </p>
+            <ul class="rental-features">
+              <li>
+                ⭐ <strong>Airport Pick-ups.</strong> RapidRide ensures a smooth
+                journey.
+              </li>
+              <li>
+                🌍 <strong>Global Network.</strong> Travel anywhere with
+                RapidRide.
+              </li>
+              <li>
+                🔒 <strong>Secure Payment Method.</strong> Safe and easy
+                transactions.
+              </li>
+              <li>
+                🚘 <strong>Clean And Sanitized Cars.</strong> Your safety is our
+                priority.
+              </li>
+            </ul>
+            <button class="about-btn">About Us 🔍</button>
+          </div>
+          <div class="rental-image">
+            <img class="rental__img-bmw" src="./cars/bmw.png" id="car" alt="Car Rental Image"  />
+          </div>
+        </div>
+      </section>
+
+      <!-- ОСЮДИ -->
+
+      <h2>Top Pick Vehicles This Month</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Ut porttitor proin id sem lacus
+        volutpat.
+      </p>
+      <div class="car-list">
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://scalethumb.leparking.fr/unsafe/331x248/smart/https://cloud.leparking.fr/2023/01/05/05/37/dodge-challenger-2023-dodge-challenger-srt-hellcat-white_8690157090.jpg"
+            alt="Doodge"
+          />
+          <h3>Doodge Challenger</h3>
+          <p>⭐ 5.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$89 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://www.autocentre.ua/wp-content/uploads/2021/02/3645470.jpg"
+            alt="Toyota Camry"
+          />
+          <h3>Toyota Camry</h3>
+          <p>⭐ 4.4 | 🚗 4 seats</p>
+          <p>Starts from <strong>$69 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1s80TXiA6G1nKUWCa3ZDK2yPQuV2izcG1sMgrxEcoewTf9W5RQGINbrlSQHnmmG2GJZY&usqp=CAU"
+            alt="Porsche Panamera"
+          />
+          <h3>Porsche Panamera</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://www.leasecosts.ca/sites/default/files/styles/car_thumb_big/public/2024-04/ford-canada-ford-f150.jpg?itok=OaslRIvJ"
+            alt="Ford F-150S"
+          />
+          <h3>Ford F-150S</h3>
+          <p>⭐ 3.8 | 🚗 4 seats</p>
+          <p>Starts from <strong>$39 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://baza-gai.com.ua/catalog-images/nissan/skyline/model.jpg"
+            alt="Nissan"
+          />
+          <h3>Nissan Skyline</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://www.2dvornika.com.ua/public/images/cars/tsupra3.jpg"
+            alt="Toyota Supra"
+          />
+          <h3>Toyota Supra</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/renault-duster__2868785-341x224x60.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>Renault Duster</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfPl9nWG3k1KyiArOaGE_0vwZ7HHrqgBiM8w&s"
+            alt="Porsche Panamera"
+          />
+          <h3>LC200</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://global.toyota/pages/news/images/2024/04/18/1330/20240418_01_ogp.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>LC PRADO</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/skoda-kodiaq__2191271-1920x1080x90.webp"
+            alt="Porsche Panamera"
+          />
+          <h3>Skoda Kodiaq</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://krazyhorse.co.uk/cdn/shop/products/charger-hellcat-pitchblack_2000x.jpg?v=1573228132"
+            alt="Porsche Panamera"
+          />
+          <h3>Doodge Hellcat</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://cdn.wheel-size.com/automobile/body/audi-rs7-2019-2023-1708148192.76531.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>Audi Rs7</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://master.shop/storage/units/big/audi-rs6-avant-2020.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>Audi Rs6</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://strg1.nm.kz/neofiles/serve-image/63ce4c589842fe0007c8470f/1190x500/q90"
+            alt="Porsche Panamera"
+          />
+          <h3>Porsche Macan</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://avatars.mds.yandex.net/get-autoru-vos/6932162/974b1ab3188acbfdd4f7c400142bd856/456x342"
+            alt="Porsche Panamera"
+          />
+          <h3>BMW M5 F90</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://s3.eu-central-2.wasabisys.com/shikauto-autocatalog/2e022074f932965dd181b31301e91d57/2801/1720001015N83CMB.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>BMW M5 G90</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://media.zigcdn.com/media/model/2021/Jun/land-cruiser-1_600x400.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>LC 300</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://cdn.hevcars.com.ua/wp-content/uploads/2018/09/bmw-x5-xdrive45e-iperformance-exterior-hevcars-01.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>BMW X5</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://www.auto-plus.tn/assets/modules/newcars/toyota/rav-4-hybride/couverture/toyota_rav-4-hybride.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>Toyota Rav 4</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCZLA6x05Z6e5F5x6TBVREgm5CyXOrlOASn6I5pPj2LVOkdTbfaGZyw53VLu8Cv0o2ylo&usqp=CAU"
+            alt="Porsche Panamera"
+          />
+          <h3>Honda CR-V</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://ukravto.ua/files/kia%20pics/Kia-sportage-anniversary-my24-2-kwcms-620x466.jpg"
+            alt="Porsche Panamera"
+          />
+          <h3>Kia Sportage</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://www.winnerauto.ua/uploads/auto_models/image_menu/0000/92.jfif"
+            alt="Porsche Panamera"
+          />
+          <h3>Range Rover</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQbPscVz52-GQxFklFJEbLxAVVMaSHrOzzJ69Uu3oOzKofOAO14TmbHBM8KgVEspYOOJE&usqp=CAU"
+            alt="Porsche Panamera"
+          />
+          <h3>Hyundai Sonata</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card">
+          <img
+            class="img__card"
+            src="https://boutique.bodemerauto.com/photo/3555/3555-1.jpg/renault-renault-rafale-2024-pack-de-personnalisation-exterieure-renault-rafale"
+            alt="Porsche Panamera"
+          />
+          <h3>Renault Rafale</h3>
+          <p>⭐ 4.0 | 🚗 4 seats</p>
+          <p>Starts from <strong>$59 / Hour</strong></p>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn">⬅</button>
+        <button class="page-btn" data-page="1">1</button>
+        <button class="page-btn" data-page="2">2</button>
+        <button class="page-btn" data-page="3">3</button>
+        <button class="page-btn" data-page="4">4</button>
+        <button class="page-btn" data-page="5">5</button>
+        <button class="page-btn" data-page="6">6</button>
+        <button class="page-btn">⮕</button>
+      </div>
+
+      <div class="block__card-new">
+        <div class="text__block-card">Wide Range Of Vehicles</div>
+        <div class="cards__container">
+          <div class="card">
+            <img src="./cars/tesla.png" alt="Electric Car" />
+            <h3>Electric</h3>
+          </div>
+          <div class="card">
+            <img src="./cars/cars2.png" alt="Sedan" />
+            <h3>Sedan</h3>
+          </div>
+          <div class="card">
+            <img src="./cars/images3.png" alt="SUV" />
+            <h3>SUV</h3>
+          </div>
+          <div class="card">
+            <img src="./cars/pngwing-8.png" alt="Pick-Up" />
+            <h3>Pick-Up</h3>
+          </div>
+          <div class="card">
+            <img src="./cars/cars5.png" alt="Hatch Back" />
+            <h3>Hatch Back</h3>
+          </div>
+          <div class="card">
+            <img src="./cars/cars6.png" alt="Van" />
+            <h3>Van</h3>
+          </div>
+        </div>
+
+
+
+ 
+      </div>
+    </main>
+
+    <footer>
+
+      <!-- FOOTER -->
+
+      <div class="footer-container">
+
+        <div class="footer-logo">
+          <img src="./cars/h (21).png" alt="Логотип" />
+          <p>© 2024 YourCompany. Усі права захищені.</p>
+        </div>
+
+
+        <div class="footer-links">
+          <h4>Швидкі посилання</h4>
+          <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Послуги</a></li>
+            <li><a href="#">Контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Ми у соцмережах</h4>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./scroll.js"></script>
+  </body>
+</html>
